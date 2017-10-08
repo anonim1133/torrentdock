@@ -27,4 +27,4 @@ $localhosts = array( 			// list of local interfaces
 )
 ```
 
-**docker-compose build** to build imagess, and **docker-compose start** to run it.
+**docker-compose build** to build imagess, and **docker-compose up -d** to run it (in background, becouse of "-d").
