@@ -1,0 +1,20 @@
+## DO NOT TOUCH THINGS BELOW
+
+directory = /downloads
+session = ~/
+scgi_port=:5000
+encoding_list = UTF-8
+
+## DO NOT TOUCH THINGS ABOVE
+
+download_rate = 0
+upload_rate = 0
+
+port_range = 12340-12350
+
+port_random = yes
+
+check_hash = yes
+
+use_udp_trackers = yes
+

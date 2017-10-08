@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+    rtorrent:
+        build: ./rtorrent
+        tty: true
+        environment:
+            - TERM=xterm
+        volumes:
+            - ./rtorrent/rtorrent-config:/root/.rtorrent.rc
+            - ./rtorrent/downloads:/downloads
+
+    php:
+        image: php:7.2-rc-fpm
+        working_dir: /var/www
+        volumes:
+            - ./ruTorrent:/var/www
+            - ./rtorrent/downloads:/downloads
+
+    nginx:
+        image: nginx:latest
+        ports:
+            - 127.0.0.1:2138:80
+        volumes:
+            - ./ruTorrent:/var/www
+            - ./nginx/site.conf:/etc/nginx/conf.d/default.conf
+            - ./nginx/htpasswd:/etc/nginx/htapasswd
