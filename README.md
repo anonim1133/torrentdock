@@ -2,8 +2,11 @@ Docker for rtorrent + ruTorrent(web ui)
 
 
 # Installation:
+```
+git clone https://github.com/anonim1133/torrentdock.git
+cd torrentdock
 git clone https://github.com/Novik/ruTorrent.git
-
+```
 # Configuration
 Everything is set just barely to work.
 In nginx you can change your domain, or turn off autorization with HTTP AUTH
